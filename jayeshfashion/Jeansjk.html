@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>More Jeans - Jack_Fashion</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+     /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #222;
+      color: white;
+      padding: 15px 30px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .logo img {
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .logo h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+    }
+    .logo img:hover {
+      transform: rotate(15deg);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    /* Navbar links */
+    .navbar .nav-links {
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    .navbar .nav-links li {
+      list-style: none;
+    }
+    .navbar .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .navbar .nav-links li a:hover {
+      color: #ff9800;
+    }
+
+    /* Search in navbar */
+    .navbar .search-bar {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    .navbar .search-bar input {
+      padding: 8px 12px;
+      width: 250px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .navbar .search-bar input:focus {
+      width: 300px;
+      box-shadow: 0 0 8px #ff9800;
+    }
+
+   
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #222;
+      color: white;
+      padding: 15px 30px;
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .navbar ul li a:hover {
+      color: #ff9800;
+    }
+
+    h2.section-title {
+      text-align: center;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 25px;
+      padding: 20px 30px 40px 30px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .product img {
+      width: 100%;
+      height: 250px; /* Fixed height for all images */
+      object-fit: cover; /* Makes all images uniform without stretching */
+      border-radius: 10px;
+    }
+
+    .price {
+      margin-top: 10px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: grey;
+      margin-right: 8px;
+    }
+
+    .new-price {
+      color: #e53935;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo" onclick="goToHome()">
+      <img src="jklogo.jpg" alt="Logo">
+      <h2>Jack_Fashion</h2>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search clothing..." oninput="filterProducts()">
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="C:\Users\solan\OneDrive\Documents\Coding\login.html">Login</a></li>
+    </ul>
+  </div>
+
+  <h2 class="section-title">Jeans Collection</h2>
+
+  <!-- Products Grid -->
+  <div class="products">
+    <div class="product">
+      <img src="jeans3.webp" alt="Jeans">
+      <h3>Straight Jeans</h3>
+      <div class="price">
+        <span class="old-price">₹1599</span>
+        <span class="new-price">₹999</span>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="Jeans4.webp" alt="Jeans">
+      <h3>Straight Jeans</h3>
+      <div class="price">
+        <span class="old-price">₹1899</span>
+        <span class="new-price">₹1099</span>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="Jeans2.webp" alt="Jeans">
+      <h3>Blue Baggy Jeans</h3>
+      <div class="price">
+        <span class="old-price">₹1699</span>
+        <span class="new-price">₹899</span>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="Jeans1.avif" alt="Jeans">
+      <h3>Black Baggy Jeans</h3>
+      <div class="price">
+        <span class="old-price">₹1699</span>
+        <span class="new-price">₹1099</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
